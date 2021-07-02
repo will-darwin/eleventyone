@@ -1,0 +1,9 @@
+[
+    {
+        "name": "1inch Exchange",
+        "url": "https://1inch.exchange/",
+        "description": "DeFi/DEX Aggregator",
+        "image": "/images/1inch-logo.svg",
+        "tags": ["Trading"]
+    }
+]

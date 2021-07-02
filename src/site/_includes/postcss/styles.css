@@ -6,34 +6,46 @@
   padding: 0;
 }
 
+:root {
+  --page-color: #1f2225;
+  --text-color: #fff;
+  --text-color-secondary: #868b8d;
+  --accent-color: #d90429;
+  --dark-color: #000;
+  --border-color: #000;
+}
+
 ::-moz-selection {
-  background-color: $text-color;
+  background-color: var(--text-color);
   color: $page-color;
 }
 ::selection {
-  background-color: $text-color;
+  background-color: var(--text-color);
   color: $page-color;
 }
 
+@font-face {
+  font-family: 'Apercu Mono';
+  font-style: normal;
+  font-display: swap;
+  src: url('fonts/apercu-mono.woff') format('woff');
+}
+
 html {
-  background-color: $accent-color;
+  background-color: var(--page-color);
 }
 
 body {
+  display: flex;
   text-align: center;
-  background-color: $page-color;
-  color: mix($text-color, $page-color, 90%);
-  font-family: sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.8;
+  background-color: var(--page-color);
+  color: var(--text-color);
+  font-family: 'Apercu Mono', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
   min-height: 100vh;
-  background:  $page-color;
-  background: url(/images/bg-grid.png), linear-gradient(320deg, $page-color 0%, $accent-color 100%);
-
-  @media (min-width: $narrow) {
-    font-size: 18px;
-  };
+  background: var(--page-color);
 }
 
 .container {
@@ -80,6 +92,7 @@ p {
   font-size: 1.2em;
   margin-top: 1em;
   margin-bottom: 5em;
+  color: var(--text-color-secondary)
 }
 
 ul, ol {
@@ -109,6 +122,7 @@ a:focus {
 
 .nav {
   padding-top: 3em;
+  height: 20vh;
 
   li {
     display: inline;
@@ -117,15 +131,14 @@ a:focus {
   a:link,
   a:visited {
     display: inline-block;
-    border-top-style: solid;
+    /* border-top-style: solid;
     border-top-width: 1px;
-    border-top-color: mix($text-color, $accent-color, 40%);
+    border-top-color: mix($text-color, $accent-color, 40%); */
     border-bottom-style: none;
     padding-top: 0.8em;
-    padding-bottom: 2em;
+    /* padding-bottom: 2em; */
     margin-left: 0;
     margin-right: 0.7em;
-    width: 9em;
     text-align: left;
     color: mix($text-color, $accent-color, 80%);
     text-decoration: none;
@@ -199,4 +212,58 @@ footer {
     color: $text-color;
     border-bottom: solid 1px $text-color;
   }
+}
+
+.grey {
+  color: var(--text-color-secondary);
+}
+
+.listing-content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.8vw;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: mix($text-color, $accent-color, 10%);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: mix($text-color, $accent-color, 10%);
+}
+
+.listing-info {
+  flex-basis: 40%;
+  max-width: 40%;
+  padding-right: 0.6vw;
+}
+
+.listing-img {
+  flex-basis: 55%;
+  max-width: 55%;
+  border-radius: 0.4rem;
+  padding-left: 0.6vw;
+}
+
+.listing-name {
+  margin-bottom: 0;
+}
+
+.listing-description {
+  color: var(--text-color-secondary);
+}
+
+.button {
+  align-items: center;
+  background-color: transparent;
+  width:40%;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 30px;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  transition: .25s ease;
 }
