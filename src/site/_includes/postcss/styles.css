@@ -42,7 +42,7 @@ body {
   color: var(--text-color);
   font-family: 'Apercu Mono', sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.9em;
   line-height: 1.4;
   min-height: 100vh;
   background: var(--page-color);
@@ -97,15 +97,13 @@ p {
 
 ul, ol {
   padding-left: 1em;
+  font-size: 0.8rem;
 }
 
 a:link,
 a:visited {
   color: $text-color;
   text-decoration: none;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: mix($text-color, $accent-color, 20%)
 }
 a:hover,
 a:focus {
@@ -233,24 +231,32 @@ footer {
 }
 
 .listing-info {
-  flex-basis: 40%;
-  max-width: 40%;
+  flex-basis: 50%;
+  max-width: 50%;
   padding-right: 0.6vw;
 }
 
-.listing-img {
-  flex-basis: 55%;
-  max-width: 55%;
+.listing-resources {
+  flex-basis: 45%;
+  max-width: 45%;
   border-radius: 0.4rem;
   padding-left: 0.6vw;
 }
 
 .listing-name {
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
 }
 
 .listing-description {
   color: var(--text-color-secondary);
+  letter-spacing: -0.03em;
+  font-size: 0.8rem;
+}
+
+.listing-image {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .button {
@@ -266,4 +272,13 @@ footer {
   text-decoration: none;
   user-select: none;
   transition: .25s ease;
+}
+
+.listing-resource-item {
+  display: inline-flex;
+}
+
+.resource-name {
+  font-size: 0.8rem;
+  padding-left: 0.8rem;
 }

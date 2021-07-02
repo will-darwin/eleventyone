@@ -4,6 +4,14 @@
         "url": "https://1inch.exchange/",
         "description": "DeFi/DEX Aggregator",
         "image": "/images/1inch-logo.svg",
-        "tags": ["Trading"]
+        "etherscan": "https://etherscan.io/token/0x111111111117dc0aa78b770fa6a738034120c302",
+        "blog": "https://blog.1inch.io/",
+        "github": "https://github.com/1inch-exchange/1inch-token/"
+    },
+    {
+        "name": "Uniswap",
+        "url": "",
+        "description": "Fully decentralized on-chain protocol for token exchanges on Ethereum that uses liquidity pools instead of order books",
+        "image": "/images/uni-logo.svg"
     }
 ]
